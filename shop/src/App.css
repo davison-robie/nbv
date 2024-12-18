@@ -1,0 +1,171 @@
+/* Typography color changes based on parent class */
+.dark * {
+  color: #ebd700; /* Yellow typography for elements inside .dark */
+}
+
+.light * {
+  color: black; /* Black typography for elements inside .light */
+}
+
+/* Override specific font sizes for headings and key elements */
+h1 {
+  font-size: var(--f-s-xl);
+  font-family: "Nimbus Sans Extended Black", sans-serif;
+  margin-block-start: 0;
+}
+h2,
+h3 {
+  font-size: var(--f-s-lg);
+}
+h4,
+h5 {
+  font-size: var(--f-s-md);
+}
+h6 {
+  font-size: var(--f-s-sm);
+}
+p,
+a {
+  font-size: var(--f-s-sm);
+}
+
+.nbv-button {
+  align-items: center;
+  background-color: #ffffff00;
+  border: 2px solid #ebd700;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #ebd700;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #ebd700;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -0.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.nbv-button:focus {
+  color: #171e29;
+  background-color: #ebd700;
+}
+
+.nbv-button:hover {
+  color: #000;
+  fill: #000;
+  background-color: #ebd700;
+}
+
+.nbv-button:active {
+  color: #000;
+  fill: #000;
+  background-color: #ebd700;
+}
+
+@media (min-width: 768px) {
+  .nbv-button {
+    min-width: 170px;
+  }
+}
+
+.buy-buttons {
+  border-radius: 23px;
+  padding: 0;
+  text-align: left;
+  display: inline-block;
+  margin: 20px 0 10px 0;
+  text-align: right;
+}
+
+.buy-buttons:empty {
+  display: none;
+}
+
+.buy-button-link {
+  border-radius: 30px;
+  border: 1px solid #444;
+  padding: 9px 0;
+  margin-top: 14px;
+  display: inline-block;
+  text-align: left;
+  width: 75%;
+  min-width: 170px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.buy-button-link:hover {
+  text-decoration: none;
+}
+
+.buy-button-link--custom-button,
+.buy-button-link--physical {
+  border-radius: 0;
+  white-space: nowrap;
+  padding-right: 10px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-left: -10px;
+}
+
+.buy-button-link--physical {
+  width: auto;
+}
+
+.buy-button-link--custom-button {
+  border: none;
+  padding: 0;
+  text-align: center;
+}
+
+.buy-button-link[data-url=""] {
+  display: none;
+}
+
+.buy-button-label {
+  width: 100%;
+  text-align: right;
+}
+
+.buy-button-label,
+.buy-button-link-label {
+  font-size: 20px;
+}
+
+.buy-button-label--empty,
+.buy-button-link--custom-button .buy-button-link-label {
+  display: none;
+}
+
+.buy-button-link-icon {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  margin: 0 8px 0 15px;
+}
+
+.buy-button-link-icon,
+.buy-button-link-label {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.buy-button-link--custom-button .buy-button-link-icon {
+  width: 141px;
+  height: 41px;
+  display: inline-block;
+  margin: auto;
+  fill: #fff;
+}

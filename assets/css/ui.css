@@ -1,0 +1,104 @@
+.nbv-button {
+  align-items: center;
+  border-radius: 15px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -0.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.dark .nbv-button {
+  background-color: #00000000;
+  border: 2px solid #ebd700;
+  color: #ebd700;
+  fill: #ebd700;
+}
+
+.light .nbv-button {
+  background-color: #ebd700;
+  border: 2px solid #000;
+  color: #000;
+  fill: #000;
+}
+
+.dark .nbv-button:focus {
+  color: #000;
+  background-color: #ebd700;
+}
+
+.light .nbv-button:focus {
+  color: #ebd700;
+  background-color: #000;
+}
+
+.nbv-button:hover {
+  text-decoration: none;
+}
+
+.light .nbv-button:hover {
+  color: #ebd700;
+  fill: #ebd700;
+  background-color: #000;
+  text-decoration: none;
+}
+
+.dark .nbv-button:hover {
+  color: #000;
+  fill: #000;
+  background-color: #ebd700;
+  text-decoration: none;
+}
+
+.dark .nbv-button:active {
+  color: #000;
+  fill: #000;
+  background-color: #ebd700;
+}
+
+.light .nbv-button:active {
+  color: #ebd700;
+  fill: #ebd700;
+  background-color: #000;
+}
+
+@media (min-width: 768px) {
+  .nbv-button {
+    min-width: 170px;
+  }
+}
+
+.nbv-button .nbv-button-icon {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0 8px 0 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.nbv-button .nbv-button-label {
+  font-size: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  color: inherit;
+}
+
+.nbv-button[data-url=""] {
+  display: none;
+}

@@ -1,0 +1,69 @@
+/* Define font faces */
+@font-face {
+  font-family: "Nimbus Sans Black";
+  src: url("/assets/fonts/nimbus-sans-black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nimbus Sans Condensed";
+  src: url("/assets/fonts/nimbus-sans-condensed.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nimbus Sans Extended Black";
+  src: url("/assets/fonts/nimbus-sans-extended-black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nimbus Sans Extended";
+  src: url("/assets/fonts/nimbus-sans-extended.ttf") format("truetype");
+}
+
+/* Adjust font sizes based on screen size */
+@media screen and (min-width: 40em) {
+  body {
+    --f-s-lg: 2rem;
+    --f-s-md: 1.5rem;
+    --f-s-sm: 1.125rem;
+  }
+}
+
+/* Apply default font size to all elements */
+body * {
+  font-size: var(--f-s-sm);
+}
+
+/* Typography color changes based on parent class */
+.dark * {
+  color: #ebd700; /* Yellow typography for elements inside .dark */
+}
+
+.light * {
+  color: black; /* Black typography for elements inside .light */
+}
+
+/* Override specific font sizes for headings and key elements */
+h1 {
+  font-size: var(--f-s-xl);
+  font-family: "Nimbus Sans Extended Black", sans-serif;
+  margin-block-start: 0;
+}
+h2,
+h3 {
+  font-size: var(--f-s-lg);
+}
+h4,
+h5 {
+  font-size: var(--f-s-md);
+}
+h6 {
+  font-size: var(--f-s-sm);
+}
+p,
+a {
+  font-size: var(--f-s-sm);
+}
+
+.icon-path {
+  fill: #fff;
+}
