@@ -1,22 +1,19 @@
-/* Define font faces */
 @font-face {
-  font-family: "Nimbus Sans Black";
-  src: url("/assets/fonts/nimbus-sans-black.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Nimbus Sans Condensed";
-  src: url("/assets/fonts/nimbus-sans-condensed.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Nimbus Sans Extended Black";
-  src: url("/assets/fonts/nimbus-sans-extended-black.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Nimbus Sans Extended";
-  src: url("/assets/fonts/nimbus-sans-extended.ttf") format("truetype");
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Questrial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/questrial-v18-latin-regular.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/questrial-v18-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/questrial-v18-latin-regular.woff2")
+      format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("../fonts/questrial-v18-latin-regular.woff") format("woff"),
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+      url("../fonts/questrial-v18-latin-regular.ttf") format("truetype"),
+    /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+      url("../fonts/questrial-v18-latin-regular.svg#Questrial") format("svg"); /* Legacy iOS */
 }
 
 /* Adjust font sizes based on screen size */
@@ -31,26 +28,29 @@
 /* Apply default font size to all elements */
 body * {
   font-size: var(--f-s-sm);
+  font-family: "Questrial", sans-serif;
 }
 
 /* Typography color changes based on parent class */
 .dark * {
-  color: #ebd700; /* Yellow typography for elements inside .dark */
+  color: var(--citrine); /* Yellow typography for elements inside .dark */
 }
 
 .light * {
-  color: black; /* Black typography for elements inside .light */
+  color: var(--night); /* Black typography for elements inside .light */
 }
 
 /* Override specific font sizes for headings and key elements */
 h1 {
   font-size: var(--f-s-xl);
-  font-family: "Nimbus Sans Extended Black", sans-serif;
   margin-block-start: 0;
+  text-transform: uppercase;
+  padding-bottom: 0.5em;
 }
 h2,
 h3 {
   font-size: var(--f-s-lg);
+  padding-bottom: 1em;
 }
 h4,
 h5 {
