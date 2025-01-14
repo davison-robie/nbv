@@ -16,6 +16,7 @@ html {
 
 body {
   overscroll-behavior: none;
+  background: linear-gradient(var(--night), var(--black-olive));
 }
 
 /* Remove default margin for consistent spacing */
